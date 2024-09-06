@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+}
+.main-content {
+    display: flex;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.enlaces {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    margin: 0 10px;
+}
+.enlaces a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 10px;
+}
+.enlaces img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 20vh;
+    border-radius: 10px;
+}
+.center-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid #000;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.header {
+    background: linear-gradient(to right, #4a2c2a, #8B4513);
+    color: #ffa500;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 2px solid #000;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.header span {
+    display: inline-block;
+    animation: bounce 2s ease-in-out infinite alternate;
+}
+@keyframes bounce {
+    0% { transform: translateX(-40%); }
+    100% { transform: translateX(40%); }
+}
+.banner {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.banner img {
+    width: 23%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.banner img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+.rotation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 2px solid #000;
+    border-radius: 15px;
+    height: 15vh;
+}
+.rotation img {
+    width: 13vh;
+    height: 13vh;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #000;
+    animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
